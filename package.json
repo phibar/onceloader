@@ -1,0 +1,30 @@
+{
+  "name": "onceloader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main.js",
+  "type": "module",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "tsc",
+    "start:node": "node  --experimental-loader ./dist/onceloader.js . ",
+    "start": "npm-run-all clean build start:node",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phibar/onceloader.git"
+  },
+  "author": "",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/phibar/onceloader/issues"
+  },
+  "homepage": "https://github.com/phibar/onceloader#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.5",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.4"
+  }
+}
